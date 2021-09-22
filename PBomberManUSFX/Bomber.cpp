@@ -30,3 +30,11 @@ void Bomber::mostrarInformacion()
 	cout << "INFORMACION BOMBER" << endl;
 	cout << "Ancho avatar: " << anchoAvatar << " Alto avatar: " << altoAvatar << " numero de vidas: " << numeroVidas << endl;
 }
+
+void Bomber::Morir()
+{
+}
+
+void Bomber::Correr() {
+
+}

@@ -7,6 +7,8 @@ class Bomber
 private:
 	int anchoAvatar;
 	int altoAvatar;
+	int posicionX;
+	int posicionY;
 
 public:
 	int numeroVidas;
@@ -24,5 +26,13 @@ public:
 	void colocarBomba();
 	void moverse();
 	void mostrarInformacion();
+	int getPosicionX() { return posicionX; }
+	void setPosicionX(int _posicionX) { posicionX = _posicionX; }
+
+	int getPosicionY() { return posicionY; }
+	void setPosicionY(int _posicionY) { posicionY = _posicionY; }
+
+	void Morir();
+	void Correr();
 };
 
