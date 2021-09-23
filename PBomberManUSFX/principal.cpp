@@ -1,19 +1,40 @@
 #include <iostream>
+#include "GameManager.h"
 //#include "Bomber.h"
-#include "GameObject.h"
-#include "GameActor.h"
-#include "Detonador.h"
+//#include "GameObject.h"
+//#include "GameActor.h"
+//#include "Detonador.h"
 
 using namespace std;
 
 int main() {
+	GameManager* gm01 = new GameManager();
+	
+
+	//int* c = new int(4);
+	//int* a = nullptr;
+	//int b = 10;
+	//cout << "Direccion de memoria donde esta b: " << &b << " El valor de la variable b:" << b << endl;
+	//a = &b;
+
+	//cout << "El valor que almacena la variable a: " << a << "El valor almacenado en la direccion que tiena a es:" << *a << endl;
+
+	//*a = 999999;
+
+	//cout << "------------------------------ - " << endl;
+	//cout << "Direccion de memoria donde esta b: " << &b << " El valor de la variable b:" << b << endl;
+	//cout << "El valor que almacena la variable a: " << a << "El valor almacenado en la direccion que tiena a es:" << *a << endl;
+
+
+
 	//GameObject o1;
+	/*
 	GameActor a1("Pedro");
 	GameActor a2;
 
 	cout << "La posicion x es: " << a1.getPosicionX() << endl;
 	cout << "El nombre del objeto a1 es: " << a1.getNombre() << endl;
-	cout << "El nombre del objeto a2 es: " << a2.getNombre() << endl;
+	cout << "El nombre del objeto a2 es: " << a2.getNombre() << endl;*/
 
 
 	/*Bomber JuanBombero;
