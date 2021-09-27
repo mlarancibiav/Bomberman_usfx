@@ -1,6 +1,7 @@
 #pragma once
 #include "GameObject.h"
 #include "GameDirecctions.h"
+#include "Texture.h"
 
 class GameActor : public GameObject
 {
@@ -28,8 +29,8 @@ protected:
 	int vidas;
 
 	// Representacion grafica del objeto
-	/*Texture* textura;
-	AnimationFrames* framesAnimacion;
+	Texture* textura;
+	/*AnimationFrames* framesAnimacion;
 
 	Tile* tileActual;
 	Tile* tileSiguiente;
@@ -48,8 +49,7 @@ public:
 	//static TileGraph* tileGraph;
 
 	//Constructores & destructores
-	GameActor();
-	GameActor(string _nombre);
+	GameActor(SDL_Renderer* renderer);
 	/*
 	GameActor(Texture* _textura);
 	~GameActor();*/
@@ -71,7 +71,8 @@ public:
 	int getEnergia() { return energia; }
 	int getVidas() { return vidas; }
 
-	/*Texture* getTextura() { return textura; }
+	Texture* getTextura() { return textura; }
+	/*
 	AnimationFrames* getFramesAnimacion() { return framesAnimacion; }
 	Tile* getTileActual() { return tileActual; }
 	Tile* getTileSiguiente() { return tileSiguiente; }
@@ -95,8 +96,8 @@ public:
 	void setVelocidad(int _velocidad) { velocidad = _velocidad; }
 	void setEnergia(int _energia) { energia = _energia; }
 	void setVidas(int _vidas) { vidas = _vidas; }
-	/*void setTextura(Texture* _textura) { textura = _textura; }
-	void setFramesAnimacion(AnimationFrames* _framesAnimacion) { framesAnimacion = _framesAnimacion; }
+	void setTextura(Texture* _textura) { textura = _textura; }
+	/*void setFramesAnimacion(AnimationFrames* _framesAnimacion) { framesAnimacion = _framesAnimacion; }
 	virtual void setTileActual(Tile* _tileNuevo) = 0;
 	void setTileSiguiente(Tile* _tileSiguiente) { tileSiguiente = _tileSiguiente; }
 	void setDireccionActual(MoveDirection _direccionActual) { direccionActual = _direccionActual; }
@@ -112,7 +113,7 @@ public:
 	int restarVida();*/
 
 	//Metodos virtuales, redefinidos o sobrecargados
-	virtual void render() {};
+	virtual void render();
 	virtual void update() {};
 	//virtual void handleEvent(SDL_Event* event) = 0;
 	//virtual void deleteGameObject();
