@@ -29,6 +29,8 @@ private:
     Texture* texturaBomber1;
     Texture* texturaBomber2;
 
+    vector<GameObject*> actoresJuego;
+    
 public:
     GameManager();
 	int onExecute();

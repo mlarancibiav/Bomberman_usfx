@@ -1,5 +1,8 @@
 #pragma once
-class Enemigo
+#include"GameActor.h"
+
+class Enemigo : public GameActor
 {
+
 };
 

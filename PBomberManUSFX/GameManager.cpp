@@ -121,6 +121,9 @@ int GameManager::onExecute() {
 		b2->setAncho(30);
 		b2->setAlto(35);
 
+		actoresJuego.push_back(b1);
+		actoresJuego.push_back(b2);
+
 		//While application is running
 		while (!quit)
 		{
@@ -149,11 +152,13 @@ int GameManager::onExecute() {
 
 			/*onLoop();
 			onRender();*/
-			b1->render();
-			b2->setPosicionX(rand() % SCREEN_WIDTH);
-			b2->setPosicionY(rand() % SCREEN_HEIGHT);
+			
+			for (int i = 0; i < actoresJuego.size(); i++) {
+				((GameActor*)actoresJuego[i])->setPosicionX(rand() % SCREEN_WIDTH);
+				((GameActor*)actoresJuego[i])->setPosicionY(rand() % SCREEN_HEIGHT);
 
-			b2->render();
+				actoresJuego[i]->render();
+			}
 
 			SDL_RenderPresent(gRenderer);
 		}
