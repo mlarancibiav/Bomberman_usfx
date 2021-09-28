@@ -1,12 +1,10 @@
 #include "GameActor.h"
 
-GameActor::GameActor(SDL_Renderer* renderer) :GameObject() {
+GameActor::GameActor(Texture* _textura) :GameObject() {
 	posicionX = 0;
 	posicionY = 0;
-	textura = nullptr;
-	textura->setRenderer(renderer);
-	direccionActual = GAME_DIRECTION_NONE;
-	direccionSiguiente = GAME_DIRECTION_NONE;
+	ancho = 25;
+	alto = 25;
 
 	solido = true;
 	indestructible = false;
@@ -21,6 +19,9 @@ GameActor::GameActor(SDL_Renderer* renderer) :GameObject() {
 	energia = 100;
 	vidas = 3;
 
+	textura = _textura;
+	direccionActual = GAME_DIRECTION_NONE;
+	direccionSiguiente = GAME_DIRECTION_NONE;
 
 }
 

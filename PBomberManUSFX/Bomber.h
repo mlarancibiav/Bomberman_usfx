@@ -4,12 +4,12 @@
 
 using namespace std;
 
-class Bomber : GameActor
+class Bomber : public GameActor
 {
 private:
 
 public:
 	//Constructor
-	Bomber(std::string path, SDL_Renderer* renderer);
+	Bomber(Texture* textura);
 };
 

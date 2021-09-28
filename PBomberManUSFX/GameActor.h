@@ -49,7 +49,7 @@ public:
 	//static TileGraph* tileGraph;
 
 	//Constructores & destructores
-	GameActor(SDL_Renderer* renderer);
+	GameActor(Texture* _textura);
 	/*
 	GameActor(Texture* _textura);
 	~GameActor();*/

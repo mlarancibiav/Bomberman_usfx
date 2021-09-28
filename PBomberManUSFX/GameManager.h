@@ -7,6 +7,8 @@
 
 #include <SDL.h>
 #include <SDL_image.h>
+#include "Bomber.h"
+
 using namespace std;
 
 const int SCREEN_WIDTH = 800;
@@ -22,7 +24,9 @@ private:
     SDL_Renderer* gRenderer;
 
     //Current displayed texture
-    SDL_Texture* gTexture = NULL;
+    SDL_Texture* gTexture = nullptr;
+
+    Texture* texturaBomber;
 
 public:
     GameManager();

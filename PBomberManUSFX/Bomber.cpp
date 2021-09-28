@@ -1,7 +1,6 @@
 #include "Bomber.h"
 
-Bomber::Bomber(std::string path, SDL_Renderer* renderer):GameActor(renderer)
+Bomber::Bomber(Texture* _textura):GameActor(_textura)
 {
-	if(path.length() > 0)
-		textura->loadFromImage(path);
+	
 }

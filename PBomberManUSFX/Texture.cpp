@@ -1,8 +1,15 @@
 #include "Texture.h"
 
 Texture::Texture() {
-	texture = nullptr;
+	texturaSDL = nullptr;
 	renderer = nullptr;
+	ancho = 0;
+	alto = 0;
+}
+
+Texture::Texture(SDL_Renderer* _renderer) {
+	texturaSDL = nullptr;
+	renderer = _renderer;
 	ancho = 0;
 	alto = 0;
 }
@@ -12,9 +19,9 @@ Texture::~Texture(){
 }
 
 void Texture::free() {
-	if (texture != nullptr) {
-		SDL_DestroyTexture(texture);
-		texture = nullptr;
+	if (texturaSDL != nullptr) {
+		SDL_DestroyTexture(texturaSDL);
+		texturaSDL = nullptr;
 
 		ancho = 0;
 		alto = 0;
@@ -36,8 +43,8 @@ bool Texture::loadFromImage(std::string path, Uint8 r, Uint8 g, Uint8 b)
 	}
 
 	SDL_SetColorKey(imageSurface, SDL_TRUE, SDL_MapRGB(imageSurface->format, r, g, b));
-	texture = SDL_CreateTextureFromSurface(renderer, imageSurface);
-	if (texture == nullptr) {
+	texturaSDL = SDL_CreateTextureFromSurface(renderer, imageSurface);
+	if (texturaSDL == nullptr) {
 		std::cout << "Error al crear la textura" << std::endl;
 		return false;
 	}
@@ -62,9 +69,9 @@ void Texture::render(int x, int y, SDL_Rect* clip, SDL_Rect* rect, double angle,
 			rect2.h = clip->h;
 		}
 
-		SDL_RenderCopyEx(renderer, texture, clip, &rect2, angle, center, renderFlip);
+		SDL_RenderCopyEx(renderer, texturaSDL, clip, &rect2, angle, center, renderFlip);
 	}
 	else {
-		SDL_RenderCopyEx(renderer, texture, clip, rect, angle, center, renderFlip);
+		SDL_RenderCopyEx(renderer, texturaSDL, clip, rect, angle, center, renderFlip);
 	}
 }

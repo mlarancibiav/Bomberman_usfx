@@ -4,6 +4,7 @@
 GameManager::GameManager() {
 	gWindow = nullptr;
 	gRenderer = nullptr;
+	texturaBomber = nullptr;
 }
 
 bool GameManager::onInit() {
@@ -109,6 +110,10 @@ int GameManager::onExecute() {
 			//Event handler
 			SDL_Event event;
 
+			texturaBomber = new Texture(gRenderer);
+			texturaBomber->loadFromImage("resources/bomber.bmp");
+			Bomber* b1 = new Bomber(texturaBomber);
+
 			//While application is running
 			while (!quit)
 			{
@@ -123,12 +128,22 @@ int GameManager::onExecute() {
 				}
 
 				//Clear screen
-				SDL_RenderClear(gRenderer);
+				//SDL_RenderClear(gRenderer);
 
 				//Render texture to screen
-				SDL_RenderCopy(gRenderer, gTexture, NULL, NULL);
+				//SDL_RenderCopy(gRenderer, gTexture, NULL, NULL);
+			
+				
+				////Clear screen
+				SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
+				SDL_RenderClear(gRenderer);
 
 				//Update screen
+
+				/*onLoop();
+				onRender();*/
+				b1->render();
+
 				SDL_RenderPresent(gRenderer);
 			}
 		}
