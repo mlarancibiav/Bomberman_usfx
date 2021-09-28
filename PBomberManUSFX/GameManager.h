@@ -26,7 +26,8 @@ private:
     //Current displayed texture
     SDL_Texture* gTexture = nullptr;
 
-    Texture* texturaBomber;
+    Texture* texturaBomber1;
+    Texture* texturaBomber2;
 
 public:
     GameManager();

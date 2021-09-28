@@ -36,6 +36,7 @@ bool Texture::loadFromImage(std::string path, Uint8 r, Uint8 g, Uint8 b)
 		std::cout << "No se cuenta con un renderizador" << std::endl;
 		return false;
 	}
+
 	SDL_Surface* imageSurface = IMG_Load(path.c_str());
 	if (imageSurface == nullptr) {
 		std::cout << "Error al cargar la imagen" << std::endl;

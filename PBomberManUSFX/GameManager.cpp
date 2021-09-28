@@ -4,7 +4,8 @@
 GameManager::GameManager() {
 	gWindow = nullptr;
 	gRenderer = nullptr;
-	texturaBomber = nullptr;
+	texturaBomber1 = nullptr;
+	texturaBomber2 = nullptr;
 }
 
 bool GameManager::onInit() {
@@ -97,55 +98,64 @@ int GameManager::onExecute() {
 	}
 	else
 	{
-		//Load media
-		if (!loadMedia())
+		//Main loop flag
+		bool quit = false;
+
+		//Event handler
+		SDL_Event event;
+
+		texturaBomber1 = new Texture(gRenderer);
+		texturaBomber1->loadFromImage("resources/bomber.bmp");
+		texturaBomber2 = new Texture(gRenderer);
+		texturaBomber2->loadFromImage("resources/textures.bmp");
+
+		Bomber* b1 = new Bomber(texturaBomber1);
+		Bomber* b2 = new Bomber(texturaBomber2);
+		b1->setImagenX(3);
+		b1->setImagenY(3);
+		b1->setAncho(20);
+		b1->setAlto(30);
+
+		b2->setImagenX(570);
+		b2->setImagenY(3);
+		b2->setAncho(30);
+		b2->setAlto(35);
+
+		//While application is running
+		while (!quit)
 		{
-			printf("Failed to load media!\n");
-		}
-		else
-		{
-			//Main loop flag
-			bool quit = false;
-
-			//Event handler
-			SDL_Event event;
-
-			texturaBomber = new Texture(gRenderer);
-			texturaBomber->loadFromImage("resources/bomber.bmp");
-			Bomber* b1 = new Bomber(texturaBomber);
-
-			//While application is running
-			while (!quit)
+			//Handle events on queue
+			while (SDL_PollEvent(&event) != 0)
 			{
-				//Handle events on queue
-				while (SDL_PollEvent(&event) != 0)
+				//User requests quit
+				if (event.type == SDL_QUIT)
 				{
-					//User requests quit
-					if (event.type == SDL_QUIT)
-					{
-						quit = true;
-					}
+					quit = true;
 				}
+			}
 
-				//Clear screen
-				//SDL_RenderClear(gRenderer);
+			//Clear screen
+			//SDL_RenderClear(gRenderer);
 
-				//Render texture to screen
-				//SDL_RenderCopy(gRenderer, gTexture, NULL, NULL);
+			//Render texture to screen
+			//SDL_RenderCopy(gRenderer, gTexture, NULL, NULL);
 			
 				
-				////Clear screen
-				SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
-				SDL_RenderClear(gRenderer);
+			////Clear screen
+			SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
+			SDL_RenderClear(gRenderer);
 
-				//Update screen
+			//Update screen
 
-				/*onLoop();
-				onRender();*/
-				b1->render();
+			/*onLoop();
+			onRender();*/
+			b1->render();
+			b2->setPosicionX(rand() % SCREEN_WIDTH);
+			b2->setPosicionY(rand() % SCREEN_HEIGHT);
 
-				SDL_RenderPresent(gRenderer);
-			}
+			b2->render();
+
+			SDL_RenderPresent(gRenderer);
 		}
 	}
 

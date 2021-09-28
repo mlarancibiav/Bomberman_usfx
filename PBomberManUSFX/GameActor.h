@@ -12,6 +12,8 @@ protected:
 	int posicionY;
 
 	// Ancho y Alto de la imagen del objeto en pixeles
+	int imagenX;
+	int imagenY;
 	int ancho;
 	int alto;
 
@@ -57,6 +59,8 @@ public:
 	// Metodos accesores
 	int getPosicionX() { return posicionX; }
 	int getPosicionY() { return posicionY; }
+	int getImagenX() { return imagenX; }
+	int getImagenY() { return imagenY; }
 	int getAncho() { return ancho; }
 	int getAlto() { return alto; }
 	bool getSolido() { return solido; }
@@ -83,6 +87,8 @@ public:
 
 	void setPosicionX(int _posicionX) { posicionX = _posicionX; }
 	void setPosicionY(int _posicionY) { posicionY = _posicionY; }
+	void setImagenX(int _imagenX) { imagenX = _imagenX; }
+	void setImagenY(int _imagenY) { imagenY = _imagenY; }
 	void setAncho(int _ancho) { ancho = _ancho; }
 	void setAlto(int _alto) { alto = _alto; }
 	void setSolido(bool _solido) { solido = _solido; }

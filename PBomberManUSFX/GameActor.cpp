@@ -3,6 +3,8 @@
 GameActor::GameActor(Texture* _textura) :GameObject() {
 	posicionX = 0;
 	posicionY = 0;
+	imagenX = 0;
+	imagenY = 0;
 	ancho = 25;
 	alto = 25;
 
@@ -22,13 +24,12 @@ GameActor::GameActor(Texture* _textura) :GameObject() {
 	textura = _textura;
 	direccionActual = GAME_DIRECTION_NONE;
 	direccionSiguiente = GAME_DIRECTION_NONE;
-
 }
 
 void GameActor::render()
 {
 	if (visible) {
-		SDL_Rect* cuadroAnimacion = new SDL_Rect({ 0, 0, getAncho(), getAlto() });
+		SDL_Rect* cuadroAnimacion = new SDL_Rect({ imagenX, imagenY, getAncho(), getAlto() });
 		textura->render(getPosicionX(), getPosicionY(), cuadroAnimacion);
 	}
 }
