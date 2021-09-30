@@ -6,6 +6,7 @@ GameManager::GameManager() {
 	gRenderer = nullptr;
 	texturaBomber1 = nullptr;
 	texturaBomber2 = nullptr;
+	texturaMuroMetalico = nullptr;
 }
 
 bool GameManager::onInit() {
@@ -108,9 +109,35 @@ int GameManager::onExecute() {
 		texturaBomber1->loadFromImage("resources/bomber.bmp");
 		texturaBomber2 = new Texture(gRenderer);
 		texturaBomber2->loadFromImage("resources/textures.bmp");
+		texturaMuroMetalico = new Texture(gRenderer);
+		texturaMuroMetalico->loadFromImage("resources/muro_metalico.jpg");
 
 		Bomber* b1 = new Bomber(texturaBomber1);
 		Bomber* b2 = new Bomber(texturaBomber2);
+		MuroMetalico* mm1 = new MuroMetalico(texturaMuroMetalico);
+		MuroMetalico* mm2 = new MuroMetalico(texturaMuroMetalico);
+		MuroMetalico* mm3 = new MuroMetalico(texturaMuroMetalico);
+		mm1->setImagenX(0);
+		mm1->setImagenY(0);
+		mm1->setAncho(30);
+		mm1->setAlto(30);
+		mm1->setPosicionX(0);
+		mm1->setPosicionY(0);
+
+		mm2->setImagenX(0);
+		mm2->setImagenY(0);
+		mm2->setAncho(30);
+		mm2->setAlto(30);
+		mm2->setPosicionX(30);
+		mm2->setPosicionY(0);
+
+		mm3->setImagenX(0);
+		mm3->setImagenY(0);
+		mm3->setAncho(30);
+		mm3->setAlto(30);
+		mm3->setPosicionX(60);
+		mm3->setPosicionY(0);
+
 		b1->setImagenX(3);
 		b1->setImagenY(3);
 		b1->setAncho(20);
@@ -120,9 +147,12 @@ int GameManager::onExecute() {
 		b2->setImagenY(3);
 		b2->setAncho(30);
 		b2->setAlto(35);
-
+				
 		actoresJuego.push_back(b1);
 		actoresJuego.push_back(b2);
+		actoresJuego.push_back(mm1);
+		actoresJuego.push_back(mm2);
+		actoresJuego.push_back(mm3);
 
 		//While application is running
 		while (!quit)
@@ -154,8 +184,8 @@ int GameManager::onExecute() {
 			onRender();*/
 			
 			for (int i = 0; i < actoresJuego.size(); i++) {
-				((GameActor*)actoresJuego[i])->setPosicionX(rand() % SCREEN_WIDTH);
-				((GameActor*)actoresJuego[i])->setPosicionY(rand() % SCREEN_HEIGHT);
+				/*((GameActor*)actoresJuego[i])->setPosicionX(rand() % SCREEN_WIDTH);
+				((GameActor*)actoresJuego[i])->setPosicionY(rand() % SCREEN_HEIGHT);*/
 
 				actoresJuego[i]->render();
 			}

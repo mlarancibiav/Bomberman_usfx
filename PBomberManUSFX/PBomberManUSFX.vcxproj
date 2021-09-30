@@ -151,6 +151,7 @@
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Muro.cpp" />
+    <ClCompile Include="MuroMetalico.cpp" />
     <ClCompile Include="principal.cpp" />
     <ClCompile Include="Texture.cpp" />
   </ItemGroup>
@@ -163,6 +164,7 @@
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Muro.h" />
+    <ClInclude Include="MuroMetalico.h" />
     <ClInclude Include="Texture.h" />
   </ItemGroup>
   <ItemGroup>

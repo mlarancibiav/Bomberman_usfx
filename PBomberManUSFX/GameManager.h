@@ -8,6 +8,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "Bomber.h"
+#include "MuroMetalico.h"
 
 using namespace std;
 
@@ -28,6 +29,7 @@ private:
 
     Texture* texturaBomber1;
     Texture* texturaBomber2;
+    Texture* texturaMuroMetalico;
 
     vector<GameObject*> actoresJuego;
     
