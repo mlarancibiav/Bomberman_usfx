@@ -29,6 +29,9 @@ public:
 	int getAltoPantalla() { return altoPantalla; }
 	void setAltoPantalla(int _anchoPantalla) { altoPantalla = _anchoPantalla; }
 
+	SDL_Renderer* getRendered() { return renderer; }
+	void setRenderer(SDL_Renderer* _renderer) { renderer = _renderer; }
+
 	// Métodos heredados
 
 	// Métodos propios
