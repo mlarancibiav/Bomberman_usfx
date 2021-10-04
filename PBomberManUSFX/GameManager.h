@@ -8,7 +8,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "Bomber.h"
-#include "MuroMetalico.h"
+#include "MuroMetal.h"
 
 using namespace std;
 

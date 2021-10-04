@@ -105,11 +105,13 @@ int GameManager::onExecute() {
 		//Event handler
 		SDL_Event event;
 
-		texturaBomber1 = new Texture(gRenderer);
+		/*texturaBomber1 = new Texture();
+		texturaBomber2 = new Texture();
+		texturaMuroMetalico = new Texture();
+		Texture::renderer = gRenderer;
+
 		texturaBomber1->loadFromImage("resources/bomber.bmp");
-		texturaBomber2 = new Texture(gRenderer);
 		texturaBomber2->loadFromImage("resources/textures.bmp");
-		texturaMuroMetalico = new Texture(gRenderer);
 		texturaMuroMetalico->loadFromImage("resources/muro_metalico.jpg");
 
 		Bomber* b1 = new Bomber(texturaBomber1);
@@ -117,6 +119,7 @@ int GameManager::onExecute() {
 		MuroMetalico* mm1 = new MuroMetalico(texturaMuroMetalico);
 		MuroMetalico* mm2 = new MuroMetalico(texturaMuroMetalico);
 		MuroMetalico* mm3 = new MuroMetalico(texturaMuroMetalico);
+		MuroMetalico* mm4 = new MuroMetalico(texturaMuroMetalico);
 		mm1->setImagenX(0);
 		mm1->setImagenY(0);
 		mm1->setAncho(30);
@@ -152,8 +155,9 @@ int GameManager::onExecute() {
 		actoresJuego.push_back(b2);
 		actoresJuego.push_back(mm1);
 		actoresJuego.push_back(mm2);
-		actoresJuego.push_back(mm3);
+		actoresJuego.push_back(mm3);*/
 
+		//MapGenerator* generadorMapa = new 
 		//While application is running
 		while (!quit)
 		{
@@ -196,6 +200,9 @@ int GameManager::onExecute() {
 
 	//Free resources and close SDL
 	close();
+
+	std::cout << "Numero de objetos en el vector: " << actoresJuego.size() << std::endl;
+	std::cout << "Numero de objetos creados:" << GameObject::numeroGameObjectCreados << std::endl;
 
 	return 0;
 
