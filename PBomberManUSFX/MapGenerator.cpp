@@ -30,8 +30,8 @@ bool MapGenerator::crearObjetosJuego(string _path)
 
 	string line;
 	
-	Texture* texturaBomberman;
-	texturaBomberman = new Texture();
+	Texture* texturaBombermanman;
+	texturaBombermanman = new Texture();
 	Texture* texturaMuroMetal;
 	texturaMuroMetal = new Texture();
 	Texture* texturaMuroCeramica;
@@ -41,7 +41,7 @@ bool MapGenerator::crearObjetosJuego(string _path)
 	
 	Texture::renderer = renderer;
 
-	texturaBomberman->loadFromImage("resources/bomberman.jpg");
+	texturaBombermanman->loadFromImage("resources/Bombermanman.jpg");
 	texturaMuroCeramica->loadFromImage("resources/muro_ceramica.jpg");
 	texturaMuroMetal->loadFromImage("resources/muro_metal.jpg");
 	texturaSueloCesped->loadFromImage("resources/suelo_cesped.jpg");
@@ -67,7 +67,7 @@ bool MapGenerator::crearObjetosJuego(string _path)
 				objetoNuevo = new MuroCeramica(texturaMuroMetal);
 				break;
 			case 'B':
-				objetoNuevo = new Bomber(texturaBomberman);
+				objetoNuevo = new Bomberman(texturaBombermanman);
 				break;
 			}
 

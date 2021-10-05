@@ -1,5 +1,5 @@
 
-enum GameDirection{
+enum MoveDirection{
 	GAME_DIRECTION_ARRIBA,
 	GAME_DIRECTION_ABAJO,
 	GAME_DIRECTION_IZQUIERDA,

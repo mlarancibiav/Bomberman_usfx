@@ -4,7 +4,7 @@
 #include <fstream>
 #include <string>
 #include "GameObject.h"
-#include "Bomber.h"
+#include "Bomberman.h"
 #include "MuroCeramica.h"
 #include "MuroMetal.h"
 #include "SueloCesped.h"

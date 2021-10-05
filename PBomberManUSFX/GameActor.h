@@ -37,8 +37,8 @@ protected:
 	Tile* tileActual;
 	Tile* tileSiguiente;
 	*/
-	GameDirection direccionActual;
-	GameDirection direccionSiguiente;
+	MoveDirection direccionActual;
+	MoveDirection direccionSiguiente;
 
 	/*int numeroFrame;
 	int contadorFrames;

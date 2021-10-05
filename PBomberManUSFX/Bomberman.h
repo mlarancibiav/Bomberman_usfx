@@ -4,12 +4,12 @@
 
 using namespace std;
 
-class Bomber : public GameActor
+class Bomberman : public GameActor
 {
 private:
 
 public:
 	//Constructor
-	Bomber(Texture* _textura);
+	Bomberman(Texture* _textura);
 };
 
