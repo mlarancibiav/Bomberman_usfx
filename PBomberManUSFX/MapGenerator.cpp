@@ -55,19 +55,19 @@ bool MapGenerator::crearObjetosJuego(string _path)
 
 		for (int i = 0; i < chars.size(); i++) {
 			GameObject* objetoNuevo = nullptr;
-
+			Tile* tileNuevo = tilesGraph->getTileEn(x, y);
 			switch (chars[i]) {
 			case '0':
-				objetoNuevo = new SueloCesped(texturaSueloCesped);
+				objetoNuevo = new SueloCesped(texturaSueloCesped, tileNuevo);
 				break;
 			case '1':
-				objetoNuevo = new MuroMetal(texturaMuroCeramica);
+				objetoNuevo = new MuroMetal(texturaMuroCeramica, tileNuevo);
 				break;
 			case '2':
-				objetoNuevo = new MuroCeramica(texturaMuroMetal);
+				objetoNuevo = new MuroCeramica(texturaMuroMetal, tileNuevo);
 				break;
 			case 'B':
-				objetoNuevo = new Bomberman(texturaBombermanman);
+				objetoNuevo = new Bomberman(texturaBombermanman, tileNuevo);
 				break;
 			}
 

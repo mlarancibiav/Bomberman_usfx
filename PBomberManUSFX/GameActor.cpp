@@ -1,6 +1,6 @@
 #include "GameActor.h"
 
-GameActor::GameActor(Texture* _textura) :GameObject() {
+GameActor::GameActor(Texture* _textura, Tile* _tileActual) :GameObject() {
 	posicionX = 0;
 	posicionY = 0;
 	imagenX = 0;
@@ -22,8 +22,10 @@ GameActor::GameActor(Texture* _textura) :GameObject() {
 	vidas = 3;
 
 	textura = _textura;
-	direccionActual = GAME_DIRECTION_NONE;
-	direccionSiguiente = GAME_DIRECTION_NONE;
+	tileActual = _tileActual;
+	tileSiguiente = nullptr;
+	direccionActual = MOVE_DIRECTION_NONE;
+	direccionSiguiente = MOVE_DIRECTION_NONE;
 }
 
 void GameActor::render()

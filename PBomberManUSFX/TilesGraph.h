@@ -1,10 +1,11 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <array>
 #include "Tile.h"
 using namespace std;
 
-class TileGraph
+class TilesGraph
 {
 private:
 
@@ -18,11 +19,11 @@ public:
 
 	// Contructores y destructor
 	TilesGraph();
-	TIlesGraph(int _anchoTilesGraph, int _altoTilesGraph, int _anchoPantalla, int _altoPantalla);
-	~TileGraph();
+	TilesGraph(int _anchoTilesGraph, int _altoTilesGraph, int _anchoPantalla, int _altoPantalla);
+	~TilesGraph();
 
 	// Funciones especificas
-	void getTileEn(int _x, int _y);
+	Tile* getTileEn(int _x, int _y);
 
 	array<Tile*, 4> get4Vecinos(Tile* _tile);
 	array<Tile*, 8> get8Vecinos(Tile* _tile);

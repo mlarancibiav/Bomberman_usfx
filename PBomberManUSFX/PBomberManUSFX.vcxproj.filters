@@ -66,7 +66,7 @@
     <ClCompile Include="Tile.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="TileGraph.cpp">
+    <ClCompile Include="TilesGraph.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -116,7 +116,7 @@
     <ClInclude Include="Tile.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="TileGraph.h">
+    <ClInclude Include="TilesGraph.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

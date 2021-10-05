@@ -10,6 +10,6 @@ private:
 
 public:
 	//Constructor
-	Bomberman(Texture* _textura);
+	Bomberman(Texture* _textura, Tile* _tileActual);
 };
 

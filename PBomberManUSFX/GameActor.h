@@ -2,6 +2,7 @@
 #include "GameObject.h"
 #include "GameDirecctions.h"
 #include "Texture.h"
+#include "Tile.h"
 
 class GameActor : public GameObject
 {
@@ -32,11 +33,11 @@ protected:
 
 	// Representacion grafica del objeto
 	Texture* textura;
-	/*AnimationFrames* framesAnimacion;
+	/*AnimationFrames* framesAnimacion;*/
 
 	Tile* tileActual;
 	Tile* tileSiguiente;
-	*/
+	
 	MoveDirection direccionActual;
 	MoveDirection direccionSiguiente;
 
@@ -48,10 +49,10 @@ protected:
 
 public:
 	// Propiedades
-	//static TileGraph* tileGraph;
+	//static TilesGraph* tileGraph;
 
 	//Constructores & destructores
-	GameActor(Texture* _textura);
+	GameActor(Texture* _textura, Tile* _tileActual);
 	/*
 	GameActor(Texture* _textura);
 	~GameActor();*/

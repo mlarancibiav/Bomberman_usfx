@@ -159,7 +159,7 @@
     <ClCompile Include="system\KeyboardInput.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Tile.cpp" />
-    <ClCompile Include="TileGraph.cpp" />
+    <ClCompile Include="TilesGraph.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bomberman.h" />
@@ -177,7 +177,7 @@
     <ClInclude Include="system\KeyboardInput.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Tile.h" />
-    <ClInclude Include="TileGraph.h" />
+    <ClInclude Include="TilesGraph.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\bomber.bmp" />
