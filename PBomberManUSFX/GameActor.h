@@ -4,6 +4,7 @@
 #include "Texture.h"
 #include "Tile.h"
 
+
 class GameActor : public GameObject
 {
 
@@ -52,6 +53,7 @@ public:
 	//static TilesGraph* tileGraph;
 
 	//Constructores & destructores
+	GameActor();
 	GameActor(Texture* _textura, Tile* _tileActual);
 	/*
 	GameActor(Texture* _textura);
@@ -122,7 +124,7 @@ public:
 	//Metodos virtuales, redefinidos o sobrecargados
 	virtual void render();
 	virtual void update() {};
-	//virtual void handleEvent(SDL_Event* event) = 0;
-	//virtual void deleteGameObject();
+	virtual void handleEvent(SDL_Event* event) {};
+	virtual void deleteGameObject() {};
 };
 

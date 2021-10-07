@@ -60,7 +60,7 @@ bool GameManager::onInit() {
 bool GameManager::loadContent()
 {
 	generadorMapa = new MapGenerator(gRenderer, SCREEN_WIDTH, SCREEN_HEIGHT);
-	generadorMapa->crearObjetosJuego("resources/levels/level3.txt");
+	generadorMapa->crearObjetosJuego("resources/levels/level1.txt");
 	generadorMapa->transferirObjetosJuego(actoresJuego);
 
 	if (actoresJuego.size() > 0)
@@ -93,11 +93,10 @@ void GameManager::onEvent(SDL_Event* _event)
 	}
 }
 
-
 void GameManager::onLoop() {
-	/*for (int i = 0; i < actoresJuego.size(); i++) {
+	for (int i = 0; i < actoresJuego.size(); i++) {
 		actoresJuego[i]->update();
-	}*/
+	}
 }
 
 void GameManager::onRender() {

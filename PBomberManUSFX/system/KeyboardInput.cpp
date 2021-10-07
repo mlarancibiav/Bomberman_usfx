@@ -1,4 +1,4 @@
-#include "../System/KeyboardInput.h"
+#include "KeyboardInput.h"
 
 //#define DEBUG_OUTPUT_KEYBOARD_INPUT
 
