@@ -14,13 +14,13 @@ void Bomberman::update()
 	if (keyboardInput->IsKeyOn(botonAbajo)) {
 		this->setPosicionY(getPosicionY() + 1);
 	}
-	else if (keyboardInput->IsKeyOn(botomArriba)) {
+	else if (keyboardInput->IsKeyOn(botonArriba)) {
 		this->setPosicionY(getPosicionY() - 1);
 	}
 	else if (keyboardInput->IsKeyOn(botonDerecha)) {
 		this->setPosicionX(getPosicionX() + 1);
 	}
-	else if (keyboardInput->IsKeyOn(botomIzquierda)) {
+	else if (keyboardInput->IsKeyOn(botonIzquierda)) {
 		this->setPosicionX(getPosicionX() - 1);
 	}
 }
