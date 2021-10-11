@@ -28,7 +28,3 @@ void GamePawn::deleteGameObjet()
 {
 	GameActor::deleteGameObject();
 }
-
-void GamePawn::setTileActual(Tile* _tileNuevo)
-{
-}

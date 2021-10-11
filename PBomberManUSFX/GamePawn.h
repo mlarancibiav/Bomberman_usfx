@@ -35,6 +35,7 @@ public:
     virtual void deleteGameObjet();
 
     // Metodos especificos
-    virtual void setTileActual(Tile* _tileNuevo);
+    virtual void setTileActual(Tile* _tileNuevo) {};
+
 };
 

@@ -60,7 +60,7 @@ bool GameManager::onInit() {
 bool GameManager::loadContent()
 {
 	generadorMapa = new MapGenerator(gRenderer, SCREEN_WIDTH, SCREEN_HEIGHT);
-	generadorMapa->crearObjetosJuego("resources/levels/level1.txt");
+	generadorMapa->crearObjetosJuego("resources/level1.txt");
 	generadorMapa->transferirObjetosJuego(actoresJuego);
 
 	if (actoresJuego.size() > 0)
